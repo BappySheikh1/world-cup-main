@@ -1,8 +1,8 @@
 body{
   font-family: 'Poppins', sans-serif;
-  margin: 0 auto;
+  margin: 0 ;
   padding: 0;
-  background-color: lightgray;
+  /*background-color: lightgray;*/
  
 }
 /*
@@ -26,29 +26,38 @@ Header-area----------------------*/
   margin-top: 53px;
 }
 .header-info h1{
-  font-size: 50px;
+ font-size: 40px;
   color: white;
+  
 }
 .header-info p{
   color: lightgray;
 }
+
 .header-info a{
   text-decoration: none;
   font-weight: 400;
   color: #ffffff;
-  font-size: 24px;
-  padding: 10px 10px;
+  font-size: 20px;
+  padding: 10px 14px;
   background-color: red;
   border-radius: 5px;
+  
 }
-.fa-solid.filled{
-  width: 24px;
-  padding-left: 5px;
+.header-info a:hover{
+  background-image: linear-gradient(red,tomato);
+  transition: 1s ;
 }
+
 .header-banner img{
   width: 100%;
   height: 546px;
 }
+#detail{
+  background-color: red;
+  font-size:20px;
+  font-weight: bold;
+ }
 /* header area end
 ---------------------------------------*/
 /*transfer area
@@ -75,7 +84,7 @@ Header-area----------------------*/
 }
 .transfer{
  border: 1px solid gray;
- border-radius:10px ;
+ border-radius:25px ;
  
 }
 .transfers{
@@ -100,17 +109,16 @@ Header-area----------------------*/
 /*Upcoming area*/
 
 .upcoming-match{
-  width: 312px;
+  width: 350px;
   height: 312px;
   background: #161616;
   border-radius: 10px;
 }
 .match-info{
-  width: 252px;
-  height: 252px;
+  /*width: 252px;
+  height: 252px;*/
   text-align: center;
   padding-top: 50px;
-  padding-left: 30px;
   line-height: 60px;
 }
 .match-info a{
@@ -132,7 +140,8 @@ Header-area----------------------*/
   font-weight: bold;
 }
 .view-all{
-  display: none;
+  display:none;
+  
 }
 .Container .view-all a{
   text-decoration: none;
@@ -140,15 +149,12 @@ Header-area----------------------*/
   color: white;
   padding: 7px 20px;
   border-radius: 5px;
+  
 }
-/*
+
 website-2 area
-==================================================*/
-#detail{
-  background-color: red;
-  color: white;
-  font-weight: bold;
-}
+/*==================================================*/
+
 .germany-france{
   display: grid;
   grid-template-columns: repeat(3,1fr);
@@ -163,8 +169,6 @@ website-2 area
 }
 .flag-image{
   display: flex;
-
-
 }
 .flag-banner img{
      width: 50%;
@@ -178,6 +182,7 @@ website-2 area
 
 /*
 website-2 end====================================*/
+
 /*Footer area
 ---------------------------------------*/
 .goal-area{
@@ -219,4 +224,153 @@ font-size: 25px;
 .fa-facebook{
   color: blue;
   background-color: white;
+  }
+  /* 
+  Media Quaery area====================*/
+  /* 
+   Mobile Device
+  =====================================*/
+  @media only screen and (max-width:577px){
+    /*header area*/
+     .header-container{
+      margin: 0;
+      padding: 0;
+     
+     }
+     .header-area{
+      height: auto;
+      width: 100% ;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+     }
+     .header-info{
+      
+      margin: 0;
+      width: 50%;
+     }
+     .header-banner img{
+      width: 100%;
+      margin-top: 20px;
+     }
+     .header-info .text-title{
+       white-space: nowrap;
+       overflow: hidden;
+       text-overflow: ellipsis;
+  
+       }
+     /*Main container area
+     -------------------------*/
+     .Container{
+      padding: 0;
+      margin: 0;
+      margin-bottom: 10px;
+     }
+    
+     .Container{
+      flex-direction: column;
+   
+     }
+     .transfers{
+      grid-template-columns: repeat(1,1fr);
+      
+     }
+     .transfer{
+      width: 100%;
+      
+     }
+     .transfer img {
+      width: 100%;
+     }
+     .transfer-info{
+      width: 50%;
+     }
+     
+     /*upcoming*/
+     .upcoming-match{
+      background:none;
+      
+     }
+     
+    .match-info a{
+      box-shadow: 0px 1px 2px gray;
+    }
+    .match-info{
+      padding-left: 120px;
+    }
+
+    /*footer area*/
+    .goal-area p{
+      display: flex;
+      justify-content: space-evenly;
+      padding-right: 80px;
+
+    }
+    /*website-2
+    -----------------------------------------*/
+    .germany-france{
+      
+      
+    }
+    
+  }
+  /* tablate device 
+  -------------------------------------------*/
+  @media only screen and (min-width:578px) and (max-width:992px){
+  
+    /* header area*/
+    .header-container{
+      margin: 0;
+      padding: 0;
+    }
+    
+    .header-banner img{
+      width: 100%;
+     }
+     .header-info .text-title{
+       white-space: nowrap;
+       overflow: hidden;
+       text-overflow: ellipsis;
+  
+       }
+    
+
+
+    /* main container area */
+    
+     .Container{
+      flex-direction: column;
+      padding: 0;
+      margin: 0;
+      margin-bottom: 30px;
+     }
+     .transfers{
+      grid-template-columns: repeat(2,1fr);
+     }
+     .transfers #last-child{
+      display: none;
+     }
+     .transfers .view-all{
+      display: block;
+      margin-top: 20px;
+      
+     }
+     .upcoming-match{
+      background:none;
+      display: grid;
+      grid-template-columns: repeat(1,1fr);
+      width: 100%;
+     }
+     .match-info a{
+      box-shadow: 0px 1px 2px gray;
+      margin-right: 20px;
+    }
+    .match-info{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+    }
+   
+   
   }
